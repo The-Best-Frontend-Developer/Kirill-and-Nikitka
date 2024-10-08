@@ -1,0 +1,14 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: black;
+  margin: 0;
+}
+
+h1 {
+  color: white;
+  text-shadow: 0 0 10px yellow;
+  font-size: 60px;
+}
