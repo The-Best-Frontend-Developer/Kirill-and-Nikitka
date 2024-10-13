@@ -44,20 +44,25 @@ document.addEventListener("DOMContentLoaded", function() {
             input = prompt(`Что лучше? ${array[i - 1]} или ${array[i]}? Ответ 1 или 2`)
 
             if (input === "1") {
+                currentIndex += 1;
+                i = currentIndex;
             } else if (input === "2") {
                 [array[i - 1], array[i]] = [array[i], array[i - 1]];
                 if (i === 1) {
-                    continue;
+                    currentIndex += 1;
+                    i = currentIndex;
                 } else {
-                    i -= 2;
+                    i--;
                 }
             } else {
                 alert("Введите 1 или 2!");
             }
         }
+
+        return userValues
     }
 
-    sortArray(userValues)
+    console.log(sortArray(userValues))
     /* 17. До этой функции удалил огромный кусок кода, который делит массив на подмассивы.
     Мы проговаривали, что делаем простой код, следовательно деление на подмассивы не надо */
 });
