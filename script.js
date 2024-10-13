@@ -1,4 +1,8 @@
-document.addEventListener("DOMContentLoaded", function() {
+const btn = document.querySelector(".btn");
+
+
+//1. Событие клика на кнопку
+document.addEventListener("click", function() {
     // 1. Помечай свои изменения в комментариях и объясняй, чтобы было понятно
 
     /* 1.1. Также если комментируешь, то пиши перед комментарием номер.
@@ -62,7 +66,21 @@ document.addEventListener("DOMContentLoaded", function() {
         return userValues
     }
 
-    console.log(sortArray(userValues))
+    sortArray(userValues)
+
+    //У тебя должен быть пустой список ol с классом list
+    function createLi() {
+        const list = document.querySelector('.list');
+        userValues.forEach(userValue => {
+        const listItem = document.createElement('li');
+        listItem.textContent = userValue;
+        list.appendChild(listItem);
+        }); 
+    }
+    createLi();
     /* 17. До этой функции удалил огромный кусок кода, который делит массив на подмассивы.
     Мы проговаривали, что делаем простой код, следовательно деление на подмассивы не надо */
 });
+
+
+
