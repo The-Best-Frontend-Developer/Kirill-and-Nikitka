@@ -2,27 +2,162 @@
 <html lang="rus">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Сравните свои любимые вещи и узнайте, что у вас стоит на первом месте.">
-    <meta name="keywords" content="Тест сравнения,любимые вещи">
-    <meta name="author" content="почта">
     <title>Тесты сравнения</title>
-    <script src="script.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Здесь вы сможете пройти тесты разной сложности по Html, Css, Js, Python, а также сравнить свои любимые предметы">
+    <meta name="keywords" content="Тесты по Html, Css, Js, Python, тесты сравнения, фронтенд, бекенд">
+    <meta name="author" content="почта">
+    <script src="C:\Users\Lenovo\Desktop\tests\script.js" defer></script>
+    
+    <link rel="stylesheet" href="C:\Users\Lenovo\Desktop\tests\styles.css">
+    <link rel="icon" type="image/png" href="C:\Users\Lenovo\Desktop\tests\favicon.png" sizes="48x48">
+    <link rel="icon" type="image/svg+xml" href="C:\Users\Lenovo\Desktop\tests\favicon.svg">
+    <link rel="shortcut icon" href="C:\Users\Lenovo\Desktop\tests\favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="C:\Users\Lenovo\Desktop\tests\favicon.png">
+    <meta name="apple-mobile-web-app-title" content="Tests">
+    <link rel="manifest" href="C:\Users\Lenovo\Desktop\tests\favicon.png">
+    <meta property="og:title" content="Тесты по программированию">
+    <meta property="og:description" content="На нашем сайте вы сможете проверить и систематизировать свои знания, а также узнать много классных фишек о фронтенд разработке">
+    <meta property="og:image" content="C:\Users\Lenovo\Desktop\tests\images\og_img.png">
 </head>
+
 <body>
-    <button class="btn">Начать</button>
-    <header class="header">
+    <header class="header header--position">
+        <h1 class="header__h1--visually-hidden">Тесты по программированию разной сложности</h1>
         <div class="block-logotip">
-            <img src="" alt="" loading="lazy">
+            <a href="#" class="block-logotip-link"> 
+                <img src="C:\Users\Lenovo\Desktop\tests\cookie.png" alt="" loading="lazy" class="block-logotip-link__img-cookies">
+                <span class="block-logotip-link__text block-logotip-link__text--margin">Tests</span>
+            </a>
         </div>
-        <nav class="nav-links">
-            <ol class="list">
-               
-            </ol>
+        <nav class="nav-list">
+            <ul class="menu-list">
+                <li class="menu-list__item menu-list__item--filter">
+                    <a href="#" class="menu-list__item-link menu-list__item-link--dop-hover">Тесты</a>
+                    <ul class="tests-menu tests-menu--position-size tests-menu--shadow">
+                        <li class="tests-menu__item">
+                            <div class="img-and-text-js"> 
+                                <img src="C:\Users\Lenovo\Desktop\tests\js.png" alt="" loading="lazy" class="tests-menu__img-js" width="25" height="25">
+                                <a href="#" class="img-and-text-js__link-item programming">JavaScript</a>        
+                            </div>
+                        </li>
+                        <li class="tests-menu__item">
+                            <div class="img-and-text-html-css">
+                                <img src="C:\Users\Lenovo\Desktop\tests\html_css.png" alt="" loading="lazy" class="tests-menu__img-html-css" width="25" height="25" style="background-size: cover;">
+                                <a href="#" class="img-and-text-html-css__link-item programming">Html & Css</a>
+                            </div>
+                        </li>
+                        <li class="tests-menu__item">
+                            <div class="img-and-text-python">
+                                <img src="C:\Users\Lenovo\Desktop\tests\python.png" alt="" loading="lazy" class="tests-menu__img-python" width="25" height="25">
+                                <a href="#" class="img-and-text-html-css__link-item programming">Python</a>
+                            </div>
+                        </li>
+                    </ul>
+                
+                </li>
+               <li class="menu-list__item"><a href="#" class="menu-list__item-link menu-list__item-link--dop-hover">Главная</a></li>
+               <li class="menu-list__item"><a href="#" class="menu-list__item-link menu-list__item-link--dop-hover">Дополнительно</a></li>
+            </ul>
         </nav>
+ 
         <div class="buttons">
-            <button class="buttons__btn-start"></button>
-        </div>
+            <img src="C:\Users\Lenovo\Desktop\tests\laptop.png" alt="" loading="lazy" class="buttons__img-laptop buttons__img-laptop--margin">
+            <button class="buttons__btn-start"><span class="buttons__blur-hover">Начать тест</span></button>
+        </div> 
     </header>
+    <main class="main-box">
+        <section class="conteiner1 conteiner1--position">
+            <div class="description-tests">
+                <h2 class="description-tests__text-title">Важность тестов</h2>
+                <p class="description-tests__description">На нашем сайте вы сможете пройти тест любой сложности по разным языкам программирования и разметки(HTML и CSS + препроцессор SCSS/SASS). После прохождения теста вам будет выдаваться результат, и будут показываться полезные ссылки в местах ваших пробелов. Так после прохождения тестов вы сразу сможете приступить к изучению неизвестной вам темы.</p>
+            </div>
+            <nav class="nav-programming-languages">
+                <ul class="programming-languages">
+                    <li class="programming-languages__html"><a href="#" class="programming-languages__html-link programming-languages__all-links" style="color: black;">Html</a></li>
+                    <li class="programming-languages__css"><a href="#" class="programming-languages__css-link programming-languages__all-links" style="color: rgb(30, 182, 247);">Css</a></li>
+                    <li class="programming-languages__js"><a href="#" class="programming-languages__js-link programming-languages__all-links" style="color: rgb(234, 234, 26);">JavaScript</a></li>
+                    <li class="programming-languages__python"><a href="#" class="programming-languages__python-link programming-languages__all-links" style="color: rgb(255, 251, 0);"><span class="programming-languages__pyt" style="color: rgb(0, 0, 255);">Pyt</span>hon</a></li>
+                    <li class="programming-languages__scss"><a href="#" class="programming-languages__scss-link programming-languages__all-links" style="color: pink;">SCSS/SASS</a></li>
+                </ul>
+            </nav>
+        </section>
+    </main>
+    <footer class="footer footer--size footer__particles">
+        <section class="slider-main slider-main--position">
+            <div class="slider-buttons">
+                <button type="button" class="prev controlls"><img src="C:\Users\Lenovo\Desktop\tests\strelka_left.svg" alt="" loading="lazy" class="slider-buttons__right-svg strelka-svg"></button>
+                <button type="button" class="next controlls"><img src="C:\Users\Lenovo\Desktop\tests\strelka_right.svg" alt="" loading="lazy" class="slider-buttons__left-svg strelka-svg"></button>
+            </div>
+            <article class="all-sliders-bloks">
+                <div class="slider-block1 slider-block--size slider-block">
+                    <h2 class="slider-block1__title slider-block__title"><a href="#" class="slider-block1__link slider-block__link">БЭМ-методология</a></h2>
+                    <p class="slider-block1__description slider-block__description">C чего всё начиналось и зачем это всё нужно?</p>
+                </div>
+                <div class="slider-block2 slider-block--size slider-block">
+                    <h2 class="slider-block2__title slider-block__title"><a href="#" class="slider-block2__link slider-block__link">Препроцессор Sass/Scss</a></h2>
+                    <p class="slider-block2__description slider-block__description">Ускорение вёрстки при помощи препроцессора Sass/Scss</p>
+                </div>
+                <div class="slider-block3 slider-block--size slider-block">
+                    <h2 class="slider-block3__title slider-block__title"><a href="#" class="slider-block3__link slider-block__link">Адаптивный дизайн</a></h2>
+                    <p class="slider-block3__description slider-block__description">Создание адаптивного дизайна для всех устройств</p>
+                </div>
+                <div class="slider-block4 slider-block--size slider-block" style="display: none;">
+                    <h2 class="slider-block4__title slider-block__title"><a href="#" class="slider-block4__link slider-block__link">Roadmap по фронтенду</a></h2>
+                    <p class="slider-block4__description slider-block__description">План (roadmap) по изучению frontend-разработки. </p>
+                </div>
+                <div class="slider-block5 slider-block--size slider-block" style="display: none;">
+                    <h2 class="slider-block5__title slider-block__title"><a href="#" class="slider-block5__link slider-block__link">Фишки современного CSS3</a></h2>
+                    <p class="slider-block5__description slider-block__description">Разные фишки и тонкости CSS3</p>
+                </div>
+                <div class="slider-block6 slider-block--size slider-block" style="display: none;">
+                    <h2 class="slider-block6__title slider-block__title"><a href="#" class="slider-block6__link slider-block__link">Сетка Grid Layout</a></h2>
+                    <p class="slider-block6__description slider-block__description">Позиционирование элементов при помощи сетки Grid</p>
+                </div>
+                <div class="slider-block7 slider-block--size slider-block" style="display: none;">
+                    <h2 class="slider-block7__title slider-block__title"><a href="#" class="slider-block7__link slider-block__link">Сетка Flex Layout</a></h2>
+                    <p class="slider-block7__description slider-block__description">Позиционирование элементов при помощи сетки Flex</p>
+                </div>
+                <div class="slider-block8 slider-block--size slider-block" style="display: none;">
+                    <h2 class="slider-block8__title slider-block__title"><a href="#" class="slider-block8__link slider-block__link">Разновидности циклов</a></h2>
+                    <p class="slider-block8__description slider-block__description">Типы циклов и их особенности в <span style="color: yellow"><b>Js</b></span></p>
+                </div>
+                <div class="slider-block9 slider-block--size slider-block" style="display: none;">
+                    <h2 class="slider-block9__title slider-block__title"><a href="#" class="slider-block9__link slider-block__link">Телеграмм-боты на Python</a></h2>
+                    <p class="slider-block9__description slider-block__description">Создание Телеграмм-ботов при помощи <b>Python</b></p>
+                </div>
+                <div class="slider-block10 slider-block--size slider-block" style="display: none;">
+                    <h2 class="slider-block10__title slider-block__title"><a href="#" class="slider-block10__link slider-block__link">Что такое SEO?</a></h2>
+                    <p class="slider-block10__description slider-block__description">Для чего нужно оптимизировать сайты</p>
+                </div>
+                <div class="slider-block11 slider-block--size slider-block" style="display: none;">
+                    <h2 class="slider-block11__title slider-block__title"><a href="#" class="slider-block11__link slider-block__link">Плагины Visual Studio Code</a></h2>
+                    <p class="slider-block11__description slider-block__description">Топ лучших плагинов для удобной работы в Vs код</p>
+                </div>
+                <div class="slider-block12 slider-block--size slider-block" style="display: none;">
+                    <h2 class="slider-block12__title slider-block__title"><a href="#" class="slider-block12__link slider-block__link">Плюсы и минусы конструкторов сайтов</a></h2>
+                    <p class="slider-block12__description slider-block__description">Плюсы и минусы конструкторов сайтов по сравнению с кодовой разработкой сайтов</p>
+                </div>
+            </article>
+        </section>
+    </footer>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

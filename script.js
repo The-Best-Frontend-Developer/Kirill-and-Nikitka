@@ -1,86 +1,35 @@
-const btn = document.querySelector(".btn");
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
+const sliderBlocks = document.querySelectorAll('.slider-block');
+const sliderBlock1 = document.querySelector(".slider-block1");
 
+let currentPosition = 0;
+let visibleSlides = 3;
 
-//1. Событие клика на кнопку
-document.addEventListener("click", function() {
-    // 1. Помечай свои изменения в комментариях и объясняй, чтобы было понятно
-
-    /* 1.1. Также если комментируешь, то пиши перед комментарием номер.
-    Если уже существует номер например 1 и 2, то можно написать 1.1. 
-    Всё для удобства */
-
-    /* 2. Вот эта штука "addEventListener" я не знаю, что это,
-    но знаю, что это для того, чтобы сначала загрузилась страница,
-    а потом уже начал работать код. */
-    let userValues = []; // 3. Создал пустой массив для хранения значений
-    let input = null; // 4. переменная, хранящая то, что пользователь написал в prompt
-
-
-    for (let i = 1; i < 100; i++) {
-        // 5. Цикл, который занесёт все значения, которые написал пользователь в массив
-        input = prompt(`Напиши ${i} значение. Если всё, то "стоп" Максимум 100 значений`);
-        
-        if (input === "") {
-            alert("Пожалуйста, введите значение!");
-            i--
-            continue;
-        }
-        // 6. Если пользователь ничего не ввёл, то будет предупредительное сообщение
-
-        if (input === 'стоп') {
-            break;
-        }
-        /* 7. Если ввёл стоп, то конец этого цикла (5.).
-        В скобках я сослался на пункт 5, где написано про рассматриваемый цикл
-
-        8. В этой конструкции (7.) в прошлой версии была проверка на null также (input === 'стоп' || input === null)
-        Но в данном случае нам это не надо */
-
-        userValues.push(input); // 8. Добавляю каждое значение в массив
+prevBtn.addEventListener('click', () => {
+    currentPosition -= visibleSlides;
+    if (currentPosition < 0) {
+        currentPosition = sliderBlocks.length - visibleSlides;
     }
-
-    /* 14. Удалил все функции так как в них ошибки. */
-    /* 15. Надо бы создать функцию для сортировки значений внутри массива */
-    /* 16. Теперь делаю функцию для сортировки значений */
-    const sortArray = (array) => {
-        currentIndex = 1
-        for (let i = 1; i < array.length;) {
-            input = prompt(`Что лучше? ${array[i - 1]} или ${array[i]}? Ответ 1 или 2`)
-
-            if (input === "1") {
-                currentIndex += 1;
-                i = currentIndex;
-            } else if (input === "2") {
-                [array[i - 1], array[i]] = [array[i], array[i - 1]];
-                if (i === 1) {
-                    currentIndex += 1;
-                    i = currentIndex;
-                } else {
-                    i--;
-                }
-            } else {
-                alert("Введите 1 или 2!");
-            }
-        }
-
-        return userValues
-    }
-
-    sortArray(userValues)
-
-    //У тебя должен быть пустой список ol с классом list
-    function createLi() {
-        const list = document.querySelector('.list');
-        userValues.forEach(userValue => {
-        const listItem = document.createElement('li');
-        listItem.textContent = userValue;
-        list.appendChild(listItem);
-        }); 
-    }
-    createLi();
-    /* 17. До этой функции удалил огромный кусок кода, который делит массив на подмассивы.
-    Мы проговаривали, что делаем простой код, следовательно деление на подмассивы не надо */
+    updateSlider();
 });
 
+nextBtn.addEventListener('click', () => {
+    currentPosition += visibleSlides;
+    if (currentPosition >= sliderBlocks.length) {
+        currentPosition = 0;
+    }
+    updateSlider();
+});
 
+function updateSlider() {
+    sliderBlocks.forEach((slide, index) => {
+        if (index >= currentPosition && index < currentPosition + visibleSlides) {
+            slide.style.display = 'flex';
+        } else {
+            slide.style.display = 'none';
+        }
+    });
+}
 
+updateSlider(); 
